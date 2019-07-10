@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 1</title>
+</head>
+<body>
+<script>
+    //Bài 1: Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi  "Xin chao". Gọi hàm từ trong phần <body> của trang web.
+    // function alertMessage() {
+    //     alert('Xin chào');
+    // }
+    // alertMessage();
+
+    //Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm. 
+    // Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.
+    // function augument(num) {
+    //     num++;
+    //     return num;
+    // }
+    // let a = 1;
+    // let result = augument(a);
+    // document.write(result);
+
+    //Bài 3: Tạo hàm nhận vào hai tham số. 
+    // Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng.
+    // Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+    // function compare(num1, num2) {
+    //     let result;
+    //     if (num1 > num2) {
+    //         result = alert(num1 + ' > ' + num2);
+    //     } else {
+    //         result = alert(num1 + num2);
+    //     }
+    //     return result;
+    // }
+    //
+    // let input1 = Number(prompt('Nhập số thứ 1'));
+    // let input2 = Number(prompt('Nhập số thứ 2'));
+    // compare(input1, input2);
+
+    //Bài 4: Thêm các hàm alert() vào những vị trí thích hợp để bạn có thể nhìn thấy giá trị của biến result trước và sau lời gọi hàm
+    // function addNumbers() {
+    //     firstNum = 4;
+    //     secondNum = 8;
+    //     result = firstNum + secondNum;
+    //     // alert(result);
+    //     return result;
+    // }
+    // result = 0;
+    // result = addNumbers();
+    // alert(result);
+
+    //Bài 5.
+    let arrStar1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arrStar2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function checkStar(star) {
+        for (let i = 0; i < 7; i++) {
+            console.log('1');
+            if (arrStar1[i] == star) {
+                star = arrStar2[i];
+                console.log('2');
+                break;
+            } else {
+                console.log('3');
+                star = 'Không tìm thấy tên ngôi sao tương ứng';
+            }
+        }
+        return star;
+    }
+
+    let input = prompt('Nhập tên ngôi sao');
+    let result = checkStar(input);
+    alert('Tên ngôi sao tương ứng là: ' + result);
+</script>
+</body>
+</html>
